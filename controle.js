@@ -24,8 +24,6 @@ function TicTacToe(input) {
 
 }
 
-
-
 function VerifInput(start) {
     let c1 = document.getElementById("C1").value;
     let c2 = document.getElementById("C2").value;
@@ -47,10 +45,8 @@ function VerifInput(start) {
         (c3 == c5 && c5 == c7 && c3 == start)) { // Diagonal 2
         return true;
     }
-
     return false;
 }
-
 
 function resetBoard() {
     let cells = ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9"];
