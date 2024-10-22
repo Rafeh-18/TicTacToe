@@ -1,29 +1,5 @@
 start = "X";
 i = 0;
-
-function TicTacToe(input) {
-
-    input.value = start;
-    input.disabled = true;
-    i++;
-    if (start == "X") {
-        start = "O";
-    } else {
-        start = "X";
-    }
-
-    if (VerifInput(start)) {
-        alert("Player " + start + " won!");
-        resetBoard();
-        return;
-        
-    } else if (i == 9) {
-        alert("game draw");
-        resetBoard();
-    }
-
-}
-
 function VerifInput(start) {
     let c1 = document.getElementById("C1").value;
     let c2 = document.getElementById("C2").value;
@@ -47,6 +23,30 @@ function VerifInput(start) {
     }
     return false;
 }
+function TicTacToe(input) {
+
+    input.value = start;
+    input.disabled = true;
+    i++;
+    if (start == "X") {
+        start = "O";
+    } else {
+        start = "X";
+    }
+
+    if (VerifInput(start)) {
+        alert("Player " + start + " won!");
+        resetBoard();
+        return;
+        
+    } else if (i == 9) {
+        alert("game draw");
+        resetBoard();
+    }
+
+}
+
+
 
 function resetBoard() {
     let cells = ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9"];
