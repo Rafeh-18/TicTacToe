@@ -28,21 +28,22 @@ function TicTacToe(input) {
     input.value = start;
     input.disabled = true;
     i++;
+    if (VerifInput(start)) {
+        alert("Player " + start + " won!");
+        resetBoard();
+        return;
+        
+    } else if (i == 7) {
+        alert("game draw");
+        resetBoard();
+    }
+
     if (start == "X") {
         start = "O";
     } else {
         start = "X";
     }
 
-    if (VerifInput(start)) {
-        alert("Player " + start + " won!");
-        resetBoard();
-        return;
-        
-    } else if (i == 9) {
-        alert("game draw");
-        resetBoard();
-    }
 
 }
 
